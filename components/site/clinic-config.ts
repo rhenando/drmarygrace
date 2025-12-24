@@ -1,3 +1,4 @@
+// components/site/clinic-config.ts
 export const clinic = {
   // Clinic + Dentist (based on your banner)
   name: "Dr. Mary Grace Diwa Ortho-Dental Clinic",
@@ -6,13 +7,12 @@ export const clinic = {
   // Banner tagline (keep exact wording)
   tagline: "Committed in Giving you Great Smile",
 
-  // Short line used under hero title
+  // Short line under hero
   subtagline:
     "Gentle ortho-dental care for kids and adults — Cleaning, Pasta (Filling), Bunot (Extraction), and Braces.",
 
-  // Announcement bar message (ready to publish)
-  announcement:
-    "Now accepting appointment inquiries — call or text to book your visit.",
+  // Announcement bar
+  announcement: "Now accepting appointment inquiries — call or text to book.",
 
   // Contact (based on banner)
   phone: "0968-8832250",
@@ -22,18 +22,14 @@ export const clinic = {
   address: "2202 Mindanao Ave. Cor. Cebu St., Sampaloc, Manila.",
 
   /**
-   * Map embed URL:
-   * Paste your Google Maps Embed link here when you have it.
-   * If left empty, your UI should still show “Get Directions” via the address.
+   * ✅ Use ONLY the iframe src value (NOT the whole iframe tag)
    */
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.8494142990876!2d121.00702167457312!3d14.608799126876923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b61f9c7092b7%3A0xe8732f4540ca5268!2sOrtho-Dental%20Clinic%20Dr.Mary%20Grace%20R%20Diwa!5e1!3m2!1sen!2sph!4v1766549811501!5m2!1sen!2sph",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.8494142990876!2d121.00702167457312!3d14.608799126876923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b61f9c7092b7%3A0xe8732f4540ca5268!2sOrtho-Dental%20Clinic%20Dr.Mary%20Grace%20R%20Diwa!5e1!3m2!1sen!2sph!4v1766549299500!5m2!1sen!2sph",
 
   /**
-   * Images:
-   * Use the banner image you uploaded as your hero for the demo.
-   * Put your banner file in:
-   * /public/hero-banner.jpg
+   * Demo images (online/CDN)
+   * NOTE: add the remotePatterns in next.config.ts (I included it below).
    */
   images: {
     hero: "/hero.avif",
@@ -42,14 +38,12 @@ export const clinic = {
     hygiene: "/hygiene.jpg",
   },
 
-  // If you haven't confirmed exact clinic hours yet, this is a safe “production” set:
-  // (You can change anytime.)
+  // Safe “ready to publish” hours (until you confirm exact schedule)
   hours: [
     { day: "Monday – Saturday", time: "By appointment" },
     { day: "Sunday", time: "Closed" },
   ],
 
-  // Services (as requested)
   services: [
     {
       title: "Cleaning",
@@ -64,12 +58,11 @@ export const clinic = {
       desc: "Safe extraction with proper anesthesia, gentle handling, and clear aftercare instructions.",
     },
     {
-      title: "Braces",
+      title: "Braces / Orthodontics",
       desc: "Orthodontic assessment and braces options to improve alignment, bite, and smile confidence.",
     },
   ],
 
-  // “Why choose us” blocks (clinic tone)
   pillars: [
     {
       title: "Gentle, patient-first care",
@@ -85,17 +78,15 @@ export const clinic = {
     },
   ],
 
-  // About section (no placeholders)
   about: {
     title: "Welcome to our clinic",
     body: [
       "At Dr. Mary Grace Diwa Ortho-Dental Clinic, we focus on gentle care and clear communication so patients feel comfortable and confident during their visit.",
-      "Whether you need a simple cleaning, a filling (pasta), an extraction (bunot), or braces, we guide you through the process and explain what to expect — before we begin.",
+      "Whether you need a cleaning, a filling (pasta), an extraction (bunot), or braces, we guide you through the process and explain what to expect before we begin.",
       "For appointment inquiries, please call or text us. You may also send an online inquiry and we will respond to confirm your schedule.",
     ],
   },
 
-  // Simple review lines (safe, general, and production-usable)
   reviews: [
     {
       name: "Patient Review",
@@ -110,4 +101,4 @@ export const clinic = {
       text: "Booking was easy — I texted and got scheduled quickly.",
     },
   ],
-};
+} as const;
